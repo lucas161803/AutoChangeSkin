@@ -1,3 +1,0 @@
-specail keyword
-
-GameType.folder1,hahaha
