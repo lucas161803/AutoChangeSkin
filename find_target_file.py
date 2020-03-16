@@ -3,16 +3,16 @@ import os, read_config, shutil
 def find(target, start):
     for root, dirs, files in os.walk(start):
         for name in files:
-            if name.find(target) >= 0:
-                return os.path.join(root, name)
+            if name.lower().find(target) >= 0:
+                return root, name
                 # old_path = os.path.join(root, name)
                 # print(old_path)
                 # new_name = name.replace(target, "Test666")
                 # new_path = os.path.join(root, new_name)
                 # shutil.copy(old_path, new_path)
         for name in dirs:
-            if name.find(target) >= 0:
-                return os.path.join(root, name)
+            if name.lower().find(target) >= 0:
+                return root, name
 # return file
 
 
